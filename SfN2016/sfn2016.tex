@@ -58,7 +58,7 @@
 % Define colours (see beamerthemeconfposter.sty to change these colour definitions)
 %-----------------------------------------------------------
 
-\setbeamercolor{block title}{fg=ngreen,bg=white}
+\setbeamercolor{block title}{fg=dblue,bg=white}
 \setbeamercolor{block body}{fg=black,bg=white}
 \setbeamercolor{block alerted title}{fg=white,bg=dblue!70}
 \setbeamercolor{block alerted body}{fg=black,bg=dblue!10}
@@ -105,7 +105,7 @@
 % Name and authors of poster/paper/research
 %-----------------------------------------------------------
 
-\title{Query Based Probabilistic Synapse Detection \\ in Array Tomography}
+\title{Probabilistic Synapse Detectionin Array Tomography}
 \author{
 Anish K. Simhal		\textsuperscript{1*},
 Cecilia Aguerrebere		\textsuperscript{1},
@@ -129,12 +129,12 @@ Guillermo Sapiro		\textsuperscript{1, 6}}
 \addtobeamertemplate{headline}{} 
 {\begin{tikzpicture}[remember picture, overlay]
 \node [anchor=north west, inner sep=3cm]  at (current page.north west)
-{\includegraphics[scale=0.25]{figs/duke_univ_blue}};
+{\includegraphics[scale=0.225]{figs/duke_univ_blue}};
 \end{tikzpicture}
 \vspace{6cm} %twiddle with this later...
 \begin{tikzpicture}[remember picture, overlay]
 \node [anchor=north east, inner sep=3cm]  at (current page.north east)
-{\includegraphics[scale=0.6]{figs/IID_logo}};
+{\includegraphics[scale=0.55]{figs/IID_logo}};
 \end{tikzpicture}
 }
 \begin{frame}[t]  
@@ -146,7 +146,7 @@ Guillermo Sapiro		\textsuperscript{1, 6}}
 
 \begin{block}{Challenge} 
 \begin{itemize} 
-\item Detect specific synaptic subtypes with confidence values using array tomography data
+\item Unsupervised automatic detection of specific synaptic subtypes with confidence values using array tomography data
 \end{itemize} 
 
 %\textbf{{}}
@@ -242,7 +242,7 @@ p_F(x,y,z) = 1 - p_B(x,y,z).
 \begin{align} 
 p_P(x, y, z) = \prod_{i=x-W}^{x+W} \prod_{j=y-W}^{y+W} p_F(i,j, z),
 \end{align} 
-where, $p_F$ is the foreground probability and $W$ is the expected size of a punctum. 
+$W$ is the expected size of a punctum.  % where, $p_F$ is the foreground probability and
 \begin{figure}[!h]
 \includegraphics[width=1\textwidth]{figs/prob_conv}
 \caption{(Left) Probability map. (Right) Probability map of each pixel belonging to a 2D punctum.}
@@ -286,7 +286,7 @@ p_{3DP}(x,y,z)= p_P(x,y,z) f(x,y,z),
 \begin{figure}[!h]
 \centering
 \includegraphics[width=1\textwidth]{figs/gridsearch}
-\caption{First row: cutout of PSD-95 Punctum with center pixel highlighted. Second row: synapsin cutouts with the search grid overlaid.} 
+\caption{\textbf{First row:} cutout of PSD-95 Punctum with center pixel highlighted. \textbf{Second row:} synapsin cutouts with the search grid overlaid.} 
 \end{figure} 
 
 
@@ -317,7 +317,7 @@ p_{3DP}(x,y,z)= p_P(x,y,z) f(x,y,z),
 \begin{figure}[!h]
 \centering
 \includegraphics[width=1\textwidth]{figs/table1}
-\caption{Precision and recall values for evaluation on conjugate array tomography data}
+\caption{Precision and recall values on conjugate array tomography data}
 \label{fig:pr_curves}
 \end{figure}
 
@@ -325,7 +325,7 @@ p_{3DP}(x,y,z)= p_P(x,y,z) f(x,y,z),
 \begin{figure}[!h]
 \centering
 \includegraphics[width=0.8\textwidth]{figs/synaptogramSilane}
-\caption{Synaptogram showing the distribution of IF data for an EM identified synapse.  Each `block' is $1.221 \mu m \times 1.233 \mu m$. }
+\caption{Synaptogram showing IF data for an EM identified synapse.  Each `block' is $1.221 \mu m \times 1.233 \mu m$. }
 \label{fig:synaptogramSilane}
 \end{figure}
 
