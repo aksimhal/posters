@@ -112,14 +112,22 @@ Belvin Gong			\textsuperscript{2},
 James S. Trimmer		\textsuperscript{2},
 Richard J. Weinberg		\textsuperscript{3},
 Stephen J. Smith		\textsuperscript{4}, \\
-Guillermo Sapiro		\textsuperscript{1, 5}, 
-Kristina D. Micheva		\textsuperscript{6}}
-\institute{\textsuperscript{1}Electrical and Computer Engineering, Duke University 
-\textsuperscript{2} Dept. of Neurobiology, University of California, Davis \\
-\textsuperscript{3} Dept. of Cell Biology and Physiology, University of North Carolina
-\textsuperscript{4} Synapse Biology, Allen Institute for Brain Sciences \\
-\textsuperscript{5} Dept. of Biomedical Engineering, Dept. of Computer Science, Dept. of Mathematics, Duke University \\
-\textsuperscript{6} Molecular and Cellular Physiology, Stanford University School of Medicine}
+Guillermo Sapiro		\textsuperscript{1}, 
+Kristina D. Micheva		\textsuperscript{5}}
+\institute{\textsuperscript{1}Duke University 
+\textsuperscript{2} University of California, Davis \\
+\textsuperscript{3} University of North Carolina
+\textsuperscript{4} Allen Institute for Brain Sciences 
+\textsuperscript{5} Stanford University School of Medicine}
+
+
+%\institute{\textsuperscript{1}Electrical and Computer Engineering, Duke University 
+%\textsuperscript{2} Dept. of Neurobiology, University of California, Davis \\
+%\textsuperscript{3} Dept. of Cell Biology and Physiology, University of North Carolina
+%\textsuperscript{4} Synapse Biology, Allen Institute for Brain Sciences \\
+%\textsuperscript{5} Dept. of Biomedical Engineering, Dept. of Computer Science, Dept. of Mathematics, Duke University \\
+%\textsuperscript{6} Molecular and Cellular Physiology, Stanford University School of Medicine}
+
 
 %-----------------------------------------------------------
 % Start the poster itself
@@ -146,14 +154,14 @@ Kristina D. Micheva		\textsuperscript{6}}
 \begin{block}{Challenge} 
 
 \begin{itemize} 
-\item \textbf{How to quantify antibody performance for array tomography? }
+\item \textbf{How to automatically quantify antibody performance for array tomography? }
 \end{itemize} 
 
 
 \begin{figure}
 \centering
 \includegraphics[width=0.9\textwidth]{figs/issuesWithAntibodies}
-\caption{Each set of squares represents a 3D tomographic array of images from mouse cortex. The large blue blobs represent DAPI.  The red dots represent GAD immunostaining, using a previously validated antibody. The brown dots represent the gephyrin antibody clone of interest. }
+\caption{\textit{Large blue blobs represent DAPI.  The red dots represent GAD immunostaining, using a previously validated antibody. The brown dots represent the gephyrin antibody clone of interest. }}
 \label{fig:issueswithantibodies}
 \end{figure}
 
@@ -161,11 +169,12 @@ Kristina D. Micheva		\textsuperscript{6}}
 \begin{figure}
 \centering
 \includegraphics[width=0.9\textwidth]{figs/pairwise}
-\caption{Pairwise comparison of immunofluorescence signals on single sections from mouse brain. Each column represents an experiment where two antibodies against the same antigen (magenta) are evaluated by co-labeling with a control antibody (green). The sections are also labeled with the nuclear stain DAPI (blue).}
-\label{fig:pariwise}
+\caption{\textit{Pairwise comparison of immunofluorescence signals on single sections from mouse brain. Each column represents an experiment where two antibodies against the same antigen (magenta) are evaluated by co-labeling with a control antibody (green). The sections are also labeled with the nuclear stain DAPI (blue).}}
+\label{fig:pairwise}
 \end{figure}
 
 \end{block}
+\vspace{1in}
 
 \begin{block}{Background} 
 
@@ -176,7 +185,7 @@ Kristina D. Micheva		\textsuperscript{6}}
 \begin{figure}
 \centering
 \includegraphics[width=0.8\textwidth]{figs/at_diagram3}
-\caption{Array Tomography (AT) methodology used for creating the data \cite{Weiler}}
+\caption{\textit{Array Tomography (AT) methodology used for creating the data \cite{Weiler}}}
 \end{figure}
 
 
@@ -199,7 +208,7 @@ Kristina D. Micheva		\textsuperscript{6}}
 \textbf{Method Overview}
 
 \begin{itemize} 
-\item Compute a series of quantitative measurements using a probabilistic query-based synapse detector to evaluate and compare different antibodies and antibody dilutions.  
+\item Automatically compute quantitative measurements using a probabilistic query-based synapse detector.
 %
 %The measurements are selected to provide unbiased quantitative information to help evaluate the specificity and sensitivity of antibodies. By comparing the performance of different antibodies against a single antigen, we use the approach to identify antibodies well-suited for array tomography on brain sections
 \end{itemize} 
@@ -207,7 +216,7 @@ Kristina D. Micheva		\textsuperscript{6}}
 \begin{figure}
 \centering
 \includegraphics[width=0.9\textwidth]{figs/ABWorkflow}
-\caption{Pipeline of the proposed automatic antibody characterization and screening method}
+\caption{\textit{Pipeline of the proposed automatic antibody characterization and screening method}}
 \label{fig:pipeline}
 \end{figure}
 
@@ -226,8 +235,10 @@ Kristina D. Micheva		\textsuperscript{6}}
 \begin{figure}
 \centering
 \includegraphics[width=1\textwidth]{figs/3dpuncta_pipeline}
-\caption{The first box shows the raw image data. The second box is the output of a 'foreground probability' step; the intensity value of each pixel codes the probability it belongs to the foreground.  The third box is the output of a '2D Puncta Probability' step; each pixel codes the probability that it belongs to a 2D blob; the thresholded result is shown below.  The '3D puncta probability' image's intensity values are the probability that a voxel belongs to a blob which spans the minimum number of slices.  Second Row: the thresholded output of the 3D probability map.} 
+\caption{\textit{Automated puncta detection pipeline} }
 \end{figure}
+%The first box shows the raw image data. The second box is the output of a 'foreground probability' step; the intensity value of each pixel codes the probability it belongs to the foreground.  The third box is the output of a '2D Puncta Probability' step; each pixel codes the probability that it belongs to a 2D blob; the thresholded result is shown below.  The '3D puncta probability' image's intensity values are the probability that a voxel belongs to a blob which spans the minimum number of slices.  Second Row: the thresholded output of the 3D probability map.
+
 
 \textbf{Measure 2: Puncta Volume Size \& Standard Deviations} 
 
@@ -239,10 +250,30 @@ Kristina D. Micheva		\textsuperscript{6}}
 \begin{figure}
 \centering
 \includegraphics[width=1\textwidth]{figs/ab_sizevariance}
-\caption{Left) Staining for collybistin on a raw IF slice; note the very broad distribution of sizes for puncta. (Right) Relatively 'normal' pattern of staining on a raw IF slice, using a different anti-collybistin clone.  This difference is automatically quantified by the proposed framework. Each red scale bar is 5$\mu m$.} 
+\caption{\textit{(Left) Staining for collybistin on a raw IF slice; note the very broad distribution of sizes for puncta. (Right) Relatively 'normal' pattern of staining on a raw IF slice, using a different anti-collybistin clone.  This difference is automatically quantified by the proposed framework. Each red scale bar is 5$\mu m$.} }
 
 \end{figure}
 
+\vspace{1in}
+
+\begin{block}{References}
+\tiny{
+\begin{thebibliography}{99}
+
+
+\bibitem{Micheva2} 
+Micheva KD, Smith SJ. Array tomography: a new tool for imaging the molecular architecture and ultrastructure of neural circuits. Neuron. 2007 Jul 5;55(1):25-36.
+
+\bibitem{Saber} Saper CB. A guide to the perplexed on the specificity of antibodies. Journal of Histochemistry \& Cytochemistry. 2009;57(1):1-5.
+
+\bibitem{Simhal} 
+Simhal, Anish K., et al. Probabilistic Fluorescence-Based Synapse Detection. PLoS Computational Biology, May 2017.
+
+\bibitem{Weiler} 
+Weiler NC, Collman F, Vogelstein JT, Burns R, Smith SJ. Synaptic molecular imaging in spared and deprived columns of mouse barrel cortex with array tomography. Scientific Data. 2014 Dec 23;1.
+
+\end{thebibliography}}
+\end{block}
 
 
 
@@ -262,20 +293,21 @@ Kristina D. Micheva		\textsuperscript{6}}
 \begin{figure}
 \centering
 \includegraphics[width=0.8\textwidth]{figs/synapsedetection}
-\caption{Pairwise comparison of CAV31 IF signals on single sections from mouse brain.  The images in the left column show color scaled IF images with synapse detections overlaid in red.  The right column shows the 3 IF channels collated - CAV31 (purple), VGluT1 (green), \& DAPI (blue)} 
+\caption{\textit{Pairwise comparison of CAV31 IF signals on single sections from mouse brain.  The images in the left column show color scaled IF images with synapse detections overlaid in red.  The right column shows the 3 IF channels collated - CAV31 (purple), VGluT1 (green), \& DAPI (blue)} }
 \end{figure}
 
 
 \textbf{Measure 4: Antibody Staining Precision} 
 
 \begin{itemize} 
-\item Estimates the magnitude of 'extra' (nonsynaptic) staining. When comparing two antibodies against the same target, differences in precision are likely to reflect differences in their specificity.  \end{itemize} 
+\item Estimates the magnitude of `extra' (nonsynaptic) staining. When comparing two antibodies against the same target, differences in precision are likely to reflect differences in their specificity.  
+\end{itemize} 
 
 
 \begin{figure}
 \centering
 \includegraphics[width=1\textwidth]{figs/ab_precision_cartoon}
-\caption{In the left panel, each gephyrin punctum lies adjacent to a synapsin puncta, indicating a synapse.  The right panel shows multiple gephyrin punctum unassociated with synapsin puncta, indicating possible poor specificity. } 
+\caption{\textit{In the left panel, each gephyrin punctum lies adjacent to a synapsin puncta, indicating a synapse.  The right panel shows multiple gephyrin punctum unassociated with synapsin puncta, indicating possible poor specificity. } }
 \end{figure}
 
 
@@ -296,7 +328,7 @@ Kristina D. Micheva		\textsuperscript{6}}
 \begin{figure}
 \centering
 \includegraphics[width=0.8\textwidth]{figs/pairwise_check}
-\caption{Image from Figure \ref{fig:pairwise_check} with checkmarks indicating the superior antibody. The better antibody is judged to be the one that has more puncta associated with the control antibody and fewer puncta not associated with the control antibody. Each image is 16$x$18$\mu m$. }
+\caption{\textit{Image from Figure \ref{fig:pairwise} with checkmarks indicating the superior antibody. The better antibody is judged to be the one that has more puncta associated with the control antibody and fewer puncta not associated with the control antibody. Each image is $16 \times 18\mu m$. }}
 \label{fig:pairwise_check}
 \end{figure}
 
@@ -304,7 +336,7 @@ Kristina D. Micheva		\textsuperscript{6}}
 \begin{figure}
 \centering
 \includegraphics[width=0.9\textwidth]{figs/pairwise_table}
-\caption{Results from pairwise antibody comparisons, as shown in Figure \ref{fig:pairwise_check}.  The name in bold represents the antibody preferred by an expert based on visual examination.  Check marks are placed next to the measurements used to determine the optimal antibody.}
+\caption{\textit{Results from pairwise antibody comparisons, as shown in Figure \ref{fig:pairwise_check}.  The name in bold represents the antibody preferred by an expert based on visual examination.  Check marks are placed next to the measurements used to determine the optimal antibody.}}
 \label{fig:pairwise_table}
 \end{figure}
 
@@ -314,37 +346,21 @@ Kristina D. Micheva		\textsuperscript{6}}
 \begin{figure}
 \centering
 \includegraphics[width=1\textwidth]{figs/multiple_clones_graphs}
-\caption{Each scatter plot shows the synapse density and precision scores of multiple clones of the same antibody, with the best ranking clones circled. Expert ranking is color coded: green - best, orange - unclear, red - fail. The specific query in each case is indicated in the plot title, where the number indicates the minimum punctum size for each label.  }
+\caption{\textit{Synapse density and precision scores of multiple clones of the same antibody, with the best ranking clones circled. Expert ranking is color coded: green - best, orange - unclear, red - fail. The specific query in each case is indicated in the plot title, where the number indicates the minimum punctum size for each label.  }}
 \label{fig:multiple_clones_graphs}
 \end{figure}
 % For example, '2 Gephyrin, 2 GAD' means that a synapse in this case is defined as a gephyrin punctum that spans at least 2 slices adjacent to a GAD punctum that also spans at least 2 slices.
 \end{block} 
 
+\vspace{1in}
+
 \begin{block}{Acknowledgments} 
 
-\tiny{This work was supported by the National Institutes of Health (NIH-TRA 1R01NS092474), the Allen Institute for Brain Sciences (AIBS), and the Information Initiative at Duke University}
+\tiny{This work was supported by the National Institutes of Health (NIH-TRA 1R01NS092474), the Allen Institute for Brain Sciences (AIBS), National Science Foundation, Department of Defense, and the Information Initiative at Duke University.}
 \end{block} 
 
 
 \vspace{-0.05in}
-\begin{block}{References}
-\tiny{
-\begin{thebibliography}{99}
-
-
-\bibitem{Micheva2} 
-Micheva KD, Smith SJ. Array tomography: a new tool for imaging the molecular architecture and ultrastructure of neural circuits. Neuron. 2007 Jul 5;55(1):25-36.
-
-\bibitem{Saber} Saper CB. A guide to the perplexed on the specificity of antibodies. Journal of Histochemistry \& Cytochemistry. 2009;57(1):1-5.
-
-\bibitem{Simhal} 
-Simhal, Anish K., et al. Probabilistic Fluorescence-Based Synapse Detection. PLoS Computational Biology, May 2017.
-
-\bibitem{Weiler} 
-Weiler NC, Collman F, Vogelstein JT, Burns R, Smith SJ. Synaptic molecular imaging in spared and deprived columns of mouse barrel cortex with array tomography. Scientific Data. 2014 Dec 23;1.
-
-\end{thebibliography}}
-\end{block}
 
 \end{column}
 
