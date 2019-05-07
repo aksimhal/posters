@@ -2,6 +2,8 @@
 Collection of posters I've presented 
 
 ### Selected references: 
+SfN 2018 Annual Meeting (Nov 2018) - Poster. An array tomography exploration tool: Exploring synapses from FMR1 knockout mice" - Anish K. Simhal, Kristina D. Micheva, Yi Zuo, Richard J. Weinberg, Stephen J. Smith, Guillermo Sapiro
+
 SfN 2017 Annual Meeting (Nov 2017) - Poster. "Automated Antibody Characterization for Array Tomography" - Anish K. Simhal, Belvin Gong, James Trimmer,  Richard J. Weinberg, Stephen J. Smith, Guillermo Sapiro, Kristina D. Micheva
 
 SfN 2017 Annual Meeting (Nov 2017) - Poster. "Comparing Mouse and Human Synapses with Automated Probabilistic Synapse Analysis" - Kristina D. Micheva, Anish K. Simhal, Jonathan T. Ting, Andrew L. Ko, William W. Seeley, Edward F. Chang, Alissa Nana Li, Ed Lein, Forrest Collman, Daniel V. Madison,  Richard J. Weinberg, Stephen J. Smith, Guillermo Sapiro, 
